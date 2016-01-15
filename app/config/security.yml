@@ -25,4 +25,5 @@ security:
         # Don't allow anonymous access, and use HTTP_BASIC as auth mechanism
         main:
             anonymous: false
+            autologin: true
             http_basic: ~

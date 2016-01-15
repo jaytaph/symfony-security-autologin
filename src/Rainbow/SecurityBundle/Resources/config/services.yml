@@ -1,0 +1,10 @@
+services:
+    security.authentication.provider.autologin:
+        class: Rainbow\SecurityBundle\Firewall\AutoLoginAuthenticationProvider
+        arguments: [ ]
+        abstract: true
+
+    autologin.security.authentication.listener:
+        class: Rainbow\SecurityBundle\Firewall\AutoLoginListener
+        arguments: [ "@security.token_storage", "@security.authentication.manager" ]
+        abstract: true
